@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DealForge — Forge Better Deals Faster</title>
+  <meta name="description" content="Analyze real estate flips, rentals, and hustle deals in seconds. Get clear cash flow, ROI, and invest/pass signals. Built for hustlers who move fast.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forge: {
+              950: '#0a0a0c',
+              900: '#111114',
+              800: '#1a1a1f',
+              accent: '#22c55e'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body class="bg-forge-950 text-zinc-100 antialiased">
+  <!-- Nav -->
+  <header class="border-b border-zinc-800/50">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-forge-accent rounded-lg flex items-center justify-center font-bold text-black text-sm">DF</div>
+        <span class="font-semibold text-lg tracking-tight">DealForge</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-zinc-400">
+        <a href="#how" class="hover:text-white transition">How it works</a>
+        <a href="#deals" class="hover:text-white transition">Deal types</a>
+        <a href="#pricing" class="hover:text-white transition">Pricing</a>
+      </div>
+      <a href="#cta" class="bg-white text-black px-5 py-2 rounded-xl text-sm font-semibold hover:bg-zinc-100 transition">Start Free</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-6 pt-20 pb-16 text-center">
+    <div class="inline-flex items-center gap-2 bg-forge-800 px-4 py-1.5 rounded-full text-xs font-medium mb-8 border border-zinc-800">
+      <span class="w-2 h-2 bg-forge-accent rounded-full animate-pulse"></span>
+      Built for hustlers who close
+    </div>
+    <h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-6">
+      Forge better deals.<br>
+      <span class="gradient-text">Faster.</span>
+    </h1>
+    <p class="text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+      Drop any property, flip, or opportunity. Get instant cash flow, ROI, DSCR, and a clear invest or pass signal. No spreadsheets. No guessing.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#cta" class="bg-forge-accent text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-green-400 transition w-full sm:w-auto">
+        Analyze a Deal Free
+      </a>
+      <a href="#how" class="border border-zinc-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-zinc-900 transition w-full sm:w-auto">
+        See how it works
+      </a>
+    </div>
+    <p class="text-xs text-zinc-500 mt-4">No credit card • Instant results • Works on mobile</p>
+  </section>
+
+  <!-- Stats -->
+  <section class="max-w-6xl mx-auto px-6 pb-20">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6 text-center">
+        <div class="text-3xl font-bold text-forge-accent">12s</div>
+        <div class="text-sm text-zinc-400 mt-1">Average analysis time</div>
+      </div>
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6 text-center">
+        <div class="text-3xl font-bold text-forge-accent">15+</div>
+        <div class="text-sm text-zinc-400 mt-1">Key metrics per deal</div>
+      </div>
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6 text-center">
+        <div class="text-3xl font-bold text-forge-accent">4.9★</div>
+        <div class="text-sm text-zinc-400 mt-1">User rating</div>
+      </div>
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6 text-center">
+        <div class="text-3xl font-bold text-forge-accent">$0</div>
+        <div class="text-sm text-zinc-400 mt-1">To start</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">How it works</h2>
+    <p class="text-zinc-400 text-center mb-12 max-w-lg mx-auto">Three steps. Real numbers. Clear decision.</p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-forge-900 border border-zinc-800 rounded-3xl p-8">
+        <div class="text-forge-accent font-mono text-sm mb-4">01</div>
+        <h3 class="text-xl font-semibold mb-3">Enter the numbers</h3>
+        <p class="text-zinc-400">Purchase price, rehab, rent, or ARV. Takes under a minute. Or paste listing details.</p>
+      </div>
+      <div class="bg-forge-900 border border-zinc-800 rounded-3xl p-8">
+        <div class="text-forge-accent font-mono text-sm mb-4">02</div>
+        <h3 class="text-xl font-semibold mb-3">Get the full picture</h3>
+        <p class="text-zinc-400">Cash flow, cash-on-cash, DSCR, cap rate, IRR, break-even, and downside scenarios.</p>
+      </div>
+      <div class="bg-forge-900 border border-zinc-800 rounded-3xl p-8">
+        <div class="text-forge-accent font-mono text-sm mb-4">03</div>
+        <h3 class="text-xl font-semibold mb-3">Decide with confidence</h3>
+        <p class="text-zinc-400">Clear invest / pass score plus the exact assumptions that make or break the deal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deal types -->
+  <section id="deals" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Built for the deals you actually do</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6">
+        <h3 class="font-semibold text-lg mb-2">Fix & Flip</h3>
+        <p class="text-zinc-400 text-sm">ARV, rehab, holding costs, profit margin, and max offer price.</p>
+      </div>
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6">
+        <h3 class="font-semibold text-lg mb-2">Rentals</h3>
+        <p class="text-zinc-400 text-sm">Cash flow, cash-on-cash, DSCR, and long-term projections.</p>
+      </div>
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6">
+        <h3 class="font-semibold text-lg mb-2">Wholesale</h3>
+        <p class="text-zinc-400 text-sm">Assignment fee potential, seller motivation signals, and quick comps.</p>
+      </div>
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6">
+        <h3 class="font-semibold text-lg mb-2">Business / Hybrid</h3>
+        <p class="text-zinc-400 text-sm">SDE multiples, EBITDA, and property + operating business deals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50">
+    <h2 class="text-3xl font-bold text-center mb-12">Hustlers who stopped guessing</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <blockquote class="bg-forge-900 border border-zinc-800 rounded-3xl p-8">
+        <p class="text-lg italic mb-4">"Ran a flip through DealForge in two minutes. Saw the real numbers and walked. Saved me from a bad deal that looked good on paper."</p>
+        <footer class="text-sm text-zinc-400">— Marcus, Downriver flipper</footer>
+      </blockquote>
+      <blockquote class="bg-forge-900 border border-zinc-800 rounded-3xl p-8">
+        <p class="text-lg italic mb-4">"Finally a tool that shows me cash-on-cash and the break-even without building another spreadsheet. Using it on every property now."</p>
+        <footer class="text-sm text-zinc-400">— Rachel, rental investor</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Pricing / CTA -->
+  <section id="pricing" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50">
+    <div class="bg-forge-900 border border-zinc-800 rounded-3xl p-12 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Start forging better deals today</h2>
+      <p class="text-zinc-400 mb-8 max-w-lg mx-auto">Free forever for core analysis. Upgrade when you want saved deals, team sharing, and advanced scenarios.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4" id="cta">
+        <a href="#" class="bg-forge-accent text-black px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-green-400 transition">
+          Analyze Your First Deal Free
+        </a>
+      </div>
+      <p class="text-xs text-zinc-500 mt-6">No credit card required • Cancel anytime on paid plans</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-800/50 py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 bg-forge-accent rounded flex items-center justify-center font-bold text-black text-xs">DF</div>
+        <span>DealForge</span>
+      </div>
+      <div>Built for hustlers who move.</div>
+      <div>© 2026 DealForge</div>
+    </div>
+  </footer>
+</body>
+</html>
