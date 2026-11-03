@@ -33,7 +33,7 @@
 </head>
 <body class="bg-forge-950 text-zinc-100 antialiased">
   <!-- Nav -->
-  <header class="border-b border-zinc-800/50">
+  <header class="border-b border-zinc-800/50 sticky top-0 bg-forge-950/80 backdrop-blur z-50">
     <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <div class="w-8 h-8 bg-forge-accent rounded-lg flex items-center justify-center font-bold text-black text-sm">DF</div>
@@ -41,6 +41,7 @@
       </div>
       <div class="hidden md:flex items-center gap-8 text-sm text-zinc-400">
         <a href="#how" class="hover:text-white transition">How it works</a>
+        <a href="#calc" class="hover:text-white transition">Calculator</a>
         <a href="#deals" class="hover:text-white transition">Deal types</a>
         <a href="#pricing" class="hover:text-white transition">Pricing</a>
       </div>
@@ -62,8 +63,8 @@
       Drop any property, flip, or opportunity. Get instant cash flow, ROI, DSCR, and a clear invest or pass signal. No spreadsheets. No guessing.
     </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#cta" class="bg-forge-accent text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-green-400 transition w-full sm:w-auto">
-        Analyze a Deal Free
+      <a href="#calc" class="bg-forge-accent text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-green-400 transition w-full sm:w-auto">
+        Try the Free Calculator
       </a>
       <a href="#how" class="border border-zinc-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-zinc-900 transition w-full sm:w-auto">
         See how it works
@@ -90,6 +91,43 @@
       <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6 text-center">
         <div class="text-3xl font-bold text-forge-accent">$0</div>
         <div class="text-sm text-zinc-400 mt-1">To start</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section id="calc" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Quick Flip Calculator</h2>
+    <p class="text-zinc-400 text-center mb-12 max-w-lg mx-auto">See your numbers in seconds. No login needed.</p>
+    <div class="max-w-2xl mx-auto bg-forge-900 border border-zinc-800 rounded-3xl p-8">
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <label class="block text-sm text-zinc-400 mb-2" for="purchase">Purchase Price</label>
+          <input type="number" id="purchase" value="150000" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent">
+        </div>
+        <div>
+          <label class="block text-sm text-zinc-400 mb-2" for="rehab">Rehab Cost</label>
+          <input type="number" id="rehab" value="35000" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent">
+        </div>
+        <div>
+          <label class="block text-sm text-zinc-400 mb-2" for="arv">After Repair Value (ARV)</label>
+          <input type="number" id="arv" value="250000" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent">
+        </div>
+        <div>
+          <label class="block text-sm text-zinc-400 mb-2" for="holding">Holding & Costs</label>
+          <input type="number" id="holding" value="8000" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent">
+        </div>
+      </div>
+      <button id="calcBtn" class="w-full bg-forge-accent text-black py-4 rounded-2xl font-semibold text-lg hover:bg-green-400 transition">Calculate Profit</button>
+      <div id="results" class="mt-8 grid grid-cols-2 gap-4 hidden">
+        <div class="bg-forge-800 rounded-2xl p-4 text-center">
+          <div class="text-sm text-zinc-400">Estimated Profit</div>
+          <div id="profit" class="text-2xl font-bold text-forge-accent">$0</div>
+        </div>
+        <div class="bg-forge-800 rounded-2xl p-4 text-center">
+          <div class="text-sm text-zinc-400">Profit Margin</div>
+          <div id="margin" class="text-2xl font-bold text-forge-accent">0%</div>
+        </div>
       </div>
     </div>
   </section>
@@ -180,5 +218,22 @@
       <div>© 2026 DealForge</div>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('calcBtn').addEventListener('click', function() {
+      const purchase = parseFloat(document.getElementById('purchase').value) || 0;
+      const rehab = parseFloat(document.getElementById('rehab').value) || 0;
+      const arv = parseFloat(document.getElementById('arv').value) || 0;
+      const holding = parseFloat(document.getElementById('holding').value) || 0;
+      
+      const totalCost = purchase + rehab + holding;
+      const profit = arv - totalCost;
+      const margin = arv > 0 ? ((profit / arv) * 100).toFixed(1) : 0;
+      
+      document.getElementById('profit').textContent = '$' + Math.round(profit).toLocaleString();
+      document.getElementById('margin').textContent = margin + '%';
+      document.getElementById('results').classList.remove('hidden');
+    });
+  </script>
 </body>
 </html>
