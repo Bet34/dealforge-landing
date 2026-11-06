@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DealForge — Forge Better Deals Faster</title>
-  <meta name="description" content="Analyze real estate flips, rentals, and hustle deals in seconds. Get clear cash flow, ROI, and invest/pass signals. Built for hustlers who move fast.">
+  <title>DealForge — Forge Profitable Deals That Print Money</title>
+  <meta name="description" content="Analyze flips, rentals, betting edges, and hustle deals in seconds. Get clear numbers, invest/pass signals, and empire-building tools. Built for operators who move fast.">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -15,7 +15,8 @@
               950: '#0a0a0c',
               900: '#111114',
               800: '#1a1a1f',
-              accent: '#22c55e'
+              accent: '#22c55e',
+              danger: '#ef4444'
             }
           }
         }
@@ -29,44 +30,48 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+    .focus-ring:focus-visible {
+      outline: 2px solid #22c55e;
+      outline-offset: 2px;
+    }
   </style>
 </head>
 <body class="bg-forge-950 text-zinc-100 antialiased">
   <!-- Nav -->
   <header class="border-b border-zinc-800/50 sticky top-0 bg-forge-950/80 backdrop-blur z-50">
-    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Main navigation">
       <div class="flex items-center gap-2">
-        <div class="w-8 h-8 bg-forge-accent rounded-lg flex items-center justify-center font-bold text-black text-sm">DF</div>
+        <div class="w-8 h-8 bg-forge-accent rounded-lg flex items-center justify-center font-bold text-black text-sm" aria-hidden="true">DF</div>
         <span class="font-semibold text-lg tracking-tight">DealForge</span>
       </div>
       <div class="hidden md:flex items-center gap-8 text-sm text-zinc-400">
-        <a href="#how" class="hover:text-white transition">How it works</a>
-        <a href="#calc" class="hover:text-white transition">Calculator</a>
-        <a href="#deals" class="hover:text-white transition">Deal types</a>
-        <a href="#pricing" class="hover:text-white transition">Pricing</a>
+        <a href="#how" class="hover:text-white transition focus-ring">How it works</a>
+        <a href="#calc" class="hover:text-white transition focus-ring">Calculator</a>
+        <a href="#tools" class="hover:text-white transition focus-ring">Tools</a>
+        <a href="#pricing" class="hover:text-white transition focus-ring">Pricing</a>
       </div>
-      <a href="#cta" class="bg-white text-black px-5 py-2 rounded-xl text-sm font-semibold hover:bg-zinc-100 transition">Start Free</a>
+      <a href="#cta" class="bg-white text-black px-5 py-2 rounded-xl text-sm font-semibold hover:bg-zinc-100 transition focus-ring">Start Free</a>
     </nav>
   </header>
 
   <!-- Hero -->
   <section class="max-w-6xl mx-auto px-6 pt-20 pb-16 text-center">
     <div class="inline-flex items-center gap-2 bg-forge-800 px-4 py-1.5 rounded-full text-xs font-medium mb-8 border border-zinc-800">
-      <span class="w-2 h-2 bg-forge-accent rounded-full animate-pulse"></span>
+      <span class="w-2 h-2 bg-forge-accent rounded-full animate-pulse" aria-hidden="true"></span>
       Built for hustlers who close
     </div>
     <h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-6">
       Forge better deals.<br>
-      <span class="gradient-text">Faster.</span>
+      <span class="gradient-text">Print money.</span>
     </h1>
     <p class="text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-      Drop any property, flip, or opportunity. Get instant cash flow, ROI, DSCR, and a clear invest or pass signal. No spreadsheets. No guessing.
+      Drop any property, flip, betting edge, or opportunity. Get instant cash flow, ROI, DSCR, edge scores, and a clear invest or pass signal. No spreadsheets. No guessing. No soft limits.
     </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#calc" class="bg-forge-accent text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-green-400 transition w-full sm:w-auto">
+      <a href="#calc" class="bg-forge-accent text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-green-400 transition w-full sm:w-auto focus-ring">
         Try the Free Calculator
       </a>
-      <a href="#how" class="border border-zinc-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-zinc-900 transition w-full sm:w-auto">
+      <a href="#how" class="border border-zinc-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-zinc-900 transition w-full sm:w-auto focus-ring">
         See how it works
       </a>
     </div>
@@ -74,7 +79,7 @@
   </section>
 
   <!-- Stats -->
-  <section class="max-w-6xl mx-auto px-6 pb-20">
+  <section class="max-w-6xl mx-auto px-6 pb-20" aria-label="Key stats">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6 text-center">
         <div class="text-3xl font-bold text-forge-accent">12s</div>
@@ -98,28 +103,31 @@
   <!-- Calculator -->
   <section id="calc" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Quick Flip Calculator</h2>
-    <p class="text-zinc-400 text-center mb-12 max-w-lg mx-auto">See your numbers in seconds. No login needed.</p>
+    <p class="text-zinc-400 text-center mb-12 max-w-lg mx-auto">See your numbers in seconds. No login needed. Adjust and watch the edge appear.</p>
     <div class="max-w-2xl mx-auto bg-forge-900 border border-zinc-800 rounded-3xl p-8">
-      <div class="grid md:grid-cols-2 gap-6 mb-6">
-        <div>
-          <label class="block text-sm text-zinc-400 mb-2" for="purchase">Purchase Price</label>
-          <input type="number" id="purchase" value="150000" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent">
+      <form id="calcForm" class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm text-zinc-400 mb-2" for="purchase">Purchase Price</label>
+            <input type="number" id="purchase" value="150000" min="0" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent focus-ring" aria-describedby="purchase-help">
+            <p id="purchase-help" class="sr-only">Enter the purchase price of the property</p>
+          </div>
+          <div>
+            <label class="block text-sm text-zinc-400 mb-2" for="rehab">Rehab Cost</label>
+            <input type="number" id="rehab" value="35000" min="0" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent focus-ring">
+          </div>
+          <div>
+            <label class="block text-sm text-zinc-400 mb-2" for="arv">After Repair Value (ARV)</label>
+            <input type="number" id="arv" value="250000" min="0" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent focus-ring">
+          </div>
+          <div>
+            <label class="block text-sm text-zinc-400 mb-2" for="holding">Holding & Costs</label>
+            <input type="number" id="holding" value="8000" min="0" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent focus-ring">
+          </div>
         </div>
-        <div>
-          <label class="block text-sm text-zinc-400 mb-2" for="rehab">Rehab Cost</label>
-          <input type="number" id="rehab" value="35000" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent">
-        </div>
-        <div>
-          <label class="block text-sm text-zinc-400 mb-2" for="arv">After Repair Value (ARV)</label>
-          <input type="number" id="arv" value="250000" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent">
-        </div>
-        <div>
-          <label class="block text-sm text-zinc-400 mb-2" for="holding">Holding & Costs</label>
-          <input type="number" id="holding" value="8000" class="w-full bg-forge-800 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-forge-accent">
-        </div>
-      </div>
-      <button id="calcBtn" class="w-full bg-forge-accent text-black py-4 rounded-2xl font-semibold text-lg hover:bg-green-400 transition">Calculate Profit</button>
-      <div id="results" class="mt-8 grid grid-cols-2 gap-4 hidden">
+        <button type="button" id="calcBtn" class="w-full bg-forge-accent text-black py-4 rounded-2xl font-semibold text-lg hover:bg-green-400 transition focus-ring">Calculate Profit</button>
+      </form>
+      <div id="results" class="mt-8 grid grid-cols-2 gap-4 hidden" aria-live="polite">
         <div class="bg-forge-800 rounded-2xl p-4 text-center">
           <div class="text-sm text-zinc-400">Estimated Profit</div>
           <div id="profit" class="text-2xl font-bold text-forge-accent">$0</div>
@@ -128,6 +136,10 @@
           <div class="text-sm text-zinc-400">Profit Margin</div>
           <div id="margin" class="text-2xl font-bold text-forge-accent">0%</div>
         </div>
+        <div class="bg-forge-800 rounded-2xl p-4 text-center col-span-2">
+          <div class="text-sm text-zinc-400">Max Offer (70% Rule)</div>
+          <div id="maxOffer" class="text-2xl font-bold text-forge-accent">$0</div>
+        </div>
       </div>
     </div>
   </section>
@@ -135,51 +147,51 @@
   <!-- How it works -->
   <section id="how" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">How it works</h2>
-    <p class="text-zinc-400 text-center mb-12 max-w-lg mx-auto">Three steps. Real numbers. Clear decision.</p>
+    <p class="text-zinc-400 text-center mb-12 max-w-lg mx-auto">Three steps. Real numbers. Clear decision. No soft limits on the analysis.</p>
     <div class="grid md:grid-cols-3 gap-6">
       <div class="bg-forge-900 border border-zinc-800 rounded-3xl p-8">
         <div class="text-forge-accent font-mono text-sm mb-4">01</div>
         <h3 class="text-xl font-semibold mb-3">Enter the numbers</h3>
-        <p class="text-zinc-400">Purchase price, rehab, rent, or ARV. Takes under a minute. Or paste listing details.</p>
+        <p class="text-zinc-400">Purchase price, rehab, rent, ARV, or betting odds. Takes under a minute. Or paste listing details.</p>
       </div>
       <div class="bg-forge-900 border border-zinc-800 rounded-3xl p-8">
         <div class="text-forge-accent font-mono text-sm mb-4">02</div>
         <h3 class="text-xl font-semibold mb-3">Get the full picture</h3>
-        <p class="text-zinc-400">Cash flow, cash-on-cash, DSCR, cap rate, IRR, break-even, and downside scenarios.</p>
+        <p class="text-zinc-400">Cash flow, cash-on-cash, DSCR, cap rate, IRR, edge scores, break-even, and downside scenarios.</p>
       </div>
       <div class="bg-forge-900 border border-zinc-800 rounded-3xl p-8">
         <div class="text-forge-accent font-mono text-sm mb-4">03</div>
         <h3 class="text-xl font-semibold mb-3">Decide with confidence</h3>
-        <p class="text-zinc-400">Clear invest / pass score plus the exact assumptions that make or break the deal.</p>
+        <p class="text-zinc-400">Clear invest / pass score plus the exact assumptions that make or break the deal. Act or walk.</p>
       </div>
     </div>
   </section>
 
-  <!-- Deal types -->
-  <section id="deals" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50">
+  <!-- Tools / Deal types -->
+  <section id="tools" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Built for the deals you actually do</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6">
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6 hover:border-forge-accent/50 transition">
         <h3 class="font-semibold text-lg mb-2">Fix & Flip</h3>
-        <p class="text-zinc-400 text-sm">ARV, rehab, holding costs, profit margin, and max offer price.</p>
+        <p class="text-zinc-400 text-sm">ARV, rehab, holding costs, profit margin, max offer, and 70% rule.</p>
       </div>
-      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6">
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6 hover:border-forge-accent/50 transition">
         <h3 class="font-semibold text-lg mb-2">Rentals</h3>
         <p class="text-zinc-400 text-sm">Cash flow, cash-on-cash, DSCR, and long-term projections.</p>
       </div>
-      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6">
-        <h3 class="font-semibold text-lg mb-2">Wholesale</h3>
-        <p class="text-zinc-400 text-sm">Assignment fee potential, seller motivation signals, and quick comps.</p>
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6 hover:border-forge-accent/50 transition">
+        <h3 class="font-semibold text-lg mb-2">Betting Edges</h3>
+        <p class="text-zinc-400 text-sm">+EV identification, line shopping, bankroll management, and recovery protocols.</p>
       </div>
-      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6">
-        <h3 class="font-semibold text-lg mb-2">Business / Hybrid</h3>
-        <p class="text-zinc-400 text-sm">SDE multiples, EBITDA, and property + operating business deals.</p>
+      <div class="bg-forge-900 border border-zinc-800 rounded-2xl p-6 hover:border-forge-accent/50 transition">
+        <h3 class="font-semibold text-lg mb-2">Content & Empire</h3>
+        <p class="text-zinc-400 text-sm">Hustle tracking, affiliate funnels, and Downriver empire building tools.</p>
       </div>
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50">
+  <section class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50" aria-label="Testimonials">
     <h2 class="text-3xl font-bold text-center mb-12">Hustlers who stopped guessing</h2>
     <div class="grid md:grid-cols-2 gap-6">
       <blockquote class="bg-forge-900 border border-zinc-800 rounded-3xl p-8">
@@ -187,8 +199,8 @@
         <footer class="text-sm text-zinc-400">— Marcus, Downriver flipper</footer>
       </blockquote>
       <blockquote class="bg-forge-900 border border-zinc-800 rounded-3xl p-8">
-        <p class="text-lg italic mb-4">"Finally a tool that shows me cash-on-cash and the break-even without building another spreadsheet. Using it on every property now."</p>
-        <footer class="text-sm text-zinc-400">— Rachel, rental investor</footer>
+        <p class="text-lg italic mb-4">"Finally a tool that shows me cash-on-cash and the break-even without building another spreadsheet. Using it on every property and edge now."</p>
+        <footer class="text-sm text-zinc-400">— Rachel, rental & betting operator</footer>
       </blockquote>
     </div>
   </section>
@@ -197,9 +209,9 @@
   <section id="pricing" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800/50">
     <div class="bg-forge-900 border border-zinc-800 rounded-3xl p-12 text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Start forging better deals today</h2>
-      <p class="text-zinc-400 mb-8 max-w-lg mx-auto">Free forever for core analysis. Upgrade when you want saved deals, team sharing, and advanced scenarios.</p>
+      <p class="text-zinc-400 mb-8 max-w-lg mx-auto">Free forever for core analysis. Upgrade when you want saved deals, team sharing, advanced scenarios, and full empire tools.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4" id="cta">
-        <a href="#" class="bg-forge-accent text-black px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-green-400 transition">
+        <a href="#" class="bg-forge-accent text-black px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-green-400 transition focus-ring">
           Analyze Your First Deal Free
         </a>
       </div>
@@ -211,10 +223,10 @@
   <footer class="border-t border-zinc-800/50 py-12">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
       <div class="flex items-center gap-2">
-        <div class="w-6 h-6 bg-forge-accent rounded flex items-center justify-center font-bold text-black text-xs">DF</div>
+        <div class="w-6 h-6 bg-forge-accent rounded flex items-center justify-center font-bold text-black text-xs" aria-hidden="true">DF</div>
         <span>DealForge</span>
       </div>
-      <div>Built for hustlers who move.</div>
+      <div>Built for hustlers who move. Downriver grit.</div>
       <div>© 2026 DealForge</div>
     </div>
   </footer>
@@ -226,12 +238,19 @@
       const arv = parseFloat(document.getElementById('arv').value) || 0;
       const holding = parseFloat(document.getElementById('holding').value) || 0;
       
+      if (purchase < 0 || rehab < 0 || arv < 0 || holding < 0) {
+        alert('All values must be positive.');
+        return;
+      }
+      
       const totalCost = purchase + rehab + holding;
       const profit = arv - totalCost;
       const margin = arv > 0 ? ((profit / arv) * 100).toFixed(1) : 0;
+      const maxOffer = Math.round(arv * 0.7 - rehab - holding);
       
       document.getElementById('profit').textContent = '$' + Math.round(profit).toLocaleString();
       document.getElementById('margin').textContent = margin + '%';
+      document.getElementById('maxOffer').textContent = '$' + maxOffer.toLocaleString();
       document.getElementById('results').classList.remove('hidden');
     });
   </script>
